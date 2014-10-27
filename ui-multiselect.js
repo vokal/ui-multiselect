@@ -9,7 +9,9 @@ angular.module('underline', []).filter('underline', [function () {
 
 angular.module('ui.multiselect', []).directive('uiMultiselect', [function () {
 	return {
-		templateUrl: 'ui-multiselect.html',
+		templateUrl: function (elem, attr) {
+			return ( attr.templateUrl || 'ui-multiselect.html' );
+		},
 		scope: {
 			data: '=data',
 			output: '=output'
