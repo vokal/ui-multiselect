@@ -34,7 +34,7 @@
 			<div class="choice"
 			     ng-click="addItem(item, output.length, $event)"
 			     ng-mouseenter="$parent.selectorPosition = $index">
-				<span ng-bind-html-unsafe="'{{item}}' | underline: query"></span>
+				<span ng-bind="item"></span>
 			</div>
 		</li>
 	</ul> <!--data-->
